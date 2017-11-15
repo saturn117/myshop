@@ -25,9 +25,9 @@ class Cart(object):
                                      'price': str(product.price)}
             if update_quantity:
                 self.cart[product_id]['quantity'] = quantity
-            else:
-                self.cart[product_id]['quantity'] += quantity
-            self.save()
+        else:
+            self.cart[product_id]['quantity'] += quantity
+        self.save()
 
     def save(self):
         # update the session cart
